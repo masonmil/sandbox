@@ -23,6 +23,10 @@ namespace PhoneWordsIOSProj
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton ChoresButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField PhoneNumberText { get; set; }
 
         [Outlet]
@@ -39,6 +43,11 @@ namespace PhoneWordsIOSProj
             if (CallHistoryButton != null) {
                 CallHistoryButton.Dispose ();
                 CallHistoryButton = null;
+            }
+
+            if (ChoresButton != null) {
+                ChoresButton.Dispose ();
+                ChoresButton = null;
             }
 
             if (PhoneNumberText != null) {

@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="model\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -116,6 +117,15 @@
     <Compile Include="CallHistoryController.designer.cs">
       <DependentUpon>CallHistoryController.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChoresController.cs" />
+    <Compile Include="ChoresController.designer.cs">
+      <DependentUpon>ChoresController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskDetailController.cs" />
+    <Compile Include="TaskDetailController.designer.cs">
+      <DependentUpon>TaskDetailController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\Chore.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
