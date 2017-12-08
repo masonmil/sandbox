@@ -95,7 +95,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
-    <Folder Include="model\" />
+    <Folder Include="Features\" />
+    <Folder Include="Features\Chores\" />
+    <Folder Include="Features\Chores\model\" />
+    <Folder Include="Features\PhoneWord\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -108,24 +111,24 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PhoneTranslator.cs" />
-    <Compile Include="CallHistoryController.cs" />
-    <Compile Include="CallHistoryController.designer.cs">
-      <DependentUpon>CallHistoryController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ChoresController.cs" />
-    <Compile Include="ChoresController.designer.cs">
+    <Compile Include="Features\Chores\ChoresController.cs" />
+    <Compile Include="Features\Chores\ChoresController.designer.cs">
       <DependentUpon>ChoresController.cs</DependentUpon>
     </Compile>
-    <Compile Include="TaskDetailController.cs" />
-    <Compile Include="TaskDetailController.designer.cs">
+    <Compile Include="Features\Chores\TaskDetailController.cs" />
+    <Compile Include="Features\Chores\TaskDetailController.designer.cs">
       <DependentUpon>TaskDetailController.cs</DependentUpon>
     </Compile>
-    <Compile Include="model\Chore.cs" />
+    <Compile Include="Features\Chores\model\Chore.cs" />
+    <Compile Include="Features\PhoneWord\CallHistoryController.cs" />
+    <Compile Include="Features\PhoneWord\CallHistoryController.designer.cs">
+      <DependentUpon>CallHistoryController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\PhoneWord\PhoneTranslator.cs" />
+    <Compile Include="Features\PhoneWord\ViewController.cs" />
+    <Compile Include="Features\PhoneWord\ViewController.designer.cs">
+      <DependentUpon>ViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
