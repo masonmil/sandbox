@@ -11,16 +11,13 @@ namespace PhoneWordsIOSProj
         string translatedNumber = string.Empty;
 
         public List<string> PhoneNumbers { get; set; }
-        public List<Chore> Chores { get; set; }
+
 
         public ViewController(IntPtr handle) : base(handle)
         {
             //initialize list of phone numbers called for Call History screen
             PhoneNumbers = new List<string>();
-            Chores = new List<Chore> {
-                new Chore {Id=0, Name="Groceries", Notes="Buy bread, cheese, apples", Done=false},
-                new Chore {Id=1, Name="Devices", Notes="Buy Nexus, Galaxy, Droid", Done=false}
-            };
+
 
         }
         #region ViewDidLoad
@@ -88,14 +85,6 @@ namespace PhoneWordsIOSProj
                 }
             }
 
-            if (segue.Identifier == "ChoreSegue")
-            {
-                var choresController = segue.DestinationViewController as ChoresController;
-                if (choresController != null)
-                {
-                    choresController.Chores = this.Chores;
-                }
-            }
         }
 
         public override void DidReceiveMemoryWarning()

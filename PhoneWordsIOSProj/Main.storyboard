@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="442">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4968">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -50,14 +50,6 @@
                                     <segue id="2156" destination="555" kind="show" identifier="CallHistorySegue"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2801" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="20" y="284" width="374" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Chores"/>
-                                <connections>
-                                    <segue id="2942" destination="2793" kind="show" identifier="ChoreSegue"/>
-                                </connections>
-                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -65,13 +57,12 @@
                         <outlet property="TranslateButton" destination="199" id="name-outlet-199"/>
                         <outlet property="CallButton" destination="200" id="name-outlet-200"/>
                         <outlet property="CallHistoryButton" destination="548" id="name-outlet-548"/>
-                        <outlet property="ChoresButton" destination="2801" id="name-outlet-2801"/>
                     </connections>
                     <navigationItem title="Phoneword" id="545" key="navigationItem"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="591" y="4"/>
+            <point key="canvasLocation" x="931" y="-813"/>
         </scene>
         <scene sceneID="441">
             <objects>
@@ -83,10 +74,12 @@
                     <connections>
                         <segue id="546" destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController"/>
                     </connections>
+                    <tabBarItem key="tabBarItem" title="Phone" id="5093"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="445" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="58" y="-1"/>
+            <point key="canvasLocation" x="424" y="-925"/>
         </scene>
         <scene sceneID="554">
             <objects>
@@ -113,7 +106,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="561" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1181" y="-583"/>
+            <point key="canvasLocation" x="1472" y="-731"/>
         </scene>
         <scene sceneID="2792">
             <objects>
@@ -140,14 +133,19 @@
                             <outlet property="delegate" destination="2793" id="2796"/>
                         </connections>
                     </tableView>
-                    <connections/>
+                    <connections>
+                        <outlet property="AddButton" destination="8318" id="name-outlet-8318"/>
+                    </connections>
                     <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationItem title="Chores" id="4342" key="navigationItem"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationItem title="Chores" id="4342" key="navigationItem">
+                        <barButtonItem key="rightBarButtonItem" id="8318" systemItem="add"/>
+                    </navigationItem>
+                    <tabBarItem key="tabBarItem" title="Item" id="5161"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2799" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1190" y="233"/>
+            <point key="canvasLocation" x="318" y="37"/>
         </scene>
         <scene sceneID="3168">
             <objects>
@@ -272,7 +270,41 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3175" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1740" y="220"/>
+            <point key="canvasLocation" x="882" y="83"/>
+        </scene>
+        <scene sceneID="4967">
+            <objects>
+                <tabBarController id="4968" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="4971">
+                        <rect key="frame" x="0.0" y="687" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue id="5094" destination="442" kind="relationship" relationship="viewControllers"/>
+                        <segue id="5398" destination="5229" kind="relationship" relationship="viewControllers"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4972" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-225" y="-875"/>
+        </scene>
+        <scene sceneID="5228">
+            <objects>
+                <navigationController id="5229" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5231">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue id="6749" destination="2793" kind="relationship" relationship="rootViewController"/>
+                    </connections>
+                    <tabBarItem key="tabBarItem" title="Chore" id="5397"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5232" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-298" y="175"/>
         </scene>
     </scenes>
 </document>
