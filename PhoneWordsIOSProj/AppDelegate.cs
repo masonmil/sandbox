@@ -35,9 +35,10 @@ namespace PhoneWordsIOSProj
             else
             {
                 //User needs to log in, so show the Login View Controlller
-                var loginViewController = GetViewController(MainStoryBoard, "LoginViewController") as LoginViewController;
+                var loginNavController = GetViewController(MainStoryBoard, "LogInNavController") as LogInNavController;
+                var loginViewController = loginNavController.TopViewController as LoginViewController;
                 loginViewController.OnLoginSuccess += LoginViewController_OnLoginSuccess;
-                SetRootViewController(loginViewController, false);
+                SetRootViewController(loginNavController, false);
             }
 
 

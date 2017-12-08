@@ -40,7 +40,7 @@ namespace PhoneWordsIOSProj
 
         private bool IsUserNameValid()
         {
-            return !String.IsNullOrEmpty(userNameText.Text.Trim());
+            return !String.IsNullOrEmpty(emailText.Text.Trim());
         }
 
         private bool IsPasswordValid()

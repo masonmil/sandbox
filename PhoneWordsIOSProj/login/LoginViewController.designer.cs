@@ -16,6 +16,10 @@ namespace PhoneWordsIOSProj
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField emailText { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton forgotPasswordButton { get; set; }
 
         [Outlet]
@@ -30,16 +34,17 @@ namespace PhoneWordsIOSProj
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton signUpButton { get; set; }
 
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField userNameText { get; set; }
-
         [Action ("LoginButton_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void LoginButton_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {
+            if (emailText != null) {
+                emailText.Dispose ();
+                emailText = null;
+            }
+
             if (forgotPasswordButton != null) {
                 forgotPasswordButton.Dispose ();
                 forgotPasswordButton = null;
@@ -58,11 +63,6 @@ namespace PhoneWordsIOSProj
             if (signUpButton != null) {
                 signUpButton.Dispose ();
                 signUpButton = null;
-            }
-
-            if (userNameText != null) {
-                userNameText.Dispose ();
-                userNameText = null;
             }
         }
     }

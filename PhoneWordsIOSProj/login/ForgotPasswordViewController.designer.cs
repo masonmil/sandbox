@@ -16,10 +16,6 @@ namespace PhoneWordsIOSProj
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton cancelButton { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField emailText { get; set; }
 
         [Outlet]
@@ -28,11 +24,6 @@ namespace PhoneWordsIOSProj
 
         void ReleaseDesignerOutlets ()
         {
-            if (cancelButton != null) {
-                cancelButton.Dispose ();
-                cancelButton = null;
-            }
-
             if (emailText != null) {
                 emailText.Dispose ();
                 emailText = null;

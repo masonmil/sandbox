@@ -143,6 +143,10 @@
     <Compile Include="login\RegisterViewController.designer.cs">
       <DependentUpon>RegisterViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="login\LogInNavController.cs" />
+    <Compile Include="login\LogInNavController.designer.cs">
+      <DependentUpon>LogInNavController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

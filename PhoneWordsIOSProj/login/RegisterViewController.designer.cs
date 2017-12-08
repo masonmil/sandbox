@@ -16,15 +16,19 @@ namespace PhoneWordsIOSProj
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton cancelButton { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField confirmPasswordText { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField emailText { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField firstNameText { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField lastNameText { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -34,17 +38,8 @@ namespace PhoneWordsIOSProj
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton registerButton { get; set; }
 
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField userNameText { get; set; }
-
         void ReleaseDesignerOutlets ()
         {
-            if (cancelButton != null) {
-                cancelButton.Dispose ();
-                cancelButton = null;
-            }
-
             if (confirmPasswordText != null) {
                 confirmPasswordText.Dispose ();
                 confirmPasswordText = null;
@@ -55,6 +50,16 @@ namespace PhoneWordsIOSProj
                 emailText = null;
             }
 
+            if (firstNameText != null) {
+                firstNameText.Dispose ();
+                firstNameText = null;
+            }
+
+            if (lastNameText != null) {
+                lastNameText.Dispose ();
+                lastNameText = null;
+            }
+
             if (passwordText != null) {
                 passwordText.Dispose ();
                 passwordText = null;
@@ -63,11 +68,6 @@ namespace PhoneWordsIOSProj
             if (registerButton != null) {
                 registerButton.Dispose ();
                 registerButton = null;
-            }
-
-            if (userNameText != null) {
-                userNameText.Dispose ();
-                userNameText = null;
             }
         }
     }
