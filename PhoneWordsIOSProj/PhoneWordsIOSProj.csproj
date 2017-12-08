@@ -99,14 +99,16 @@
     <Folder Include="Features\Chores\" />
     <Folder Include="Features\Chores\model\" />
     <Folder Include="Features\PhoneWord\" />
+    <Folder Include="login\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
-    <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="MainSB.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
+    <None Include="Notes.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -128,6 +130,18 @@
     <Compile Include="Features\PhoneWord\ViewController.cs" />
     <Compile Include="Features\PhoneWord\ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login\ForgotPasswordViewController.cs" />
+    <Compile Include="login\ForgotPasswordViewController.designer.cs">
+      <DependentUpon>ForgotPasswordViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login\LoginViewController.cs" />
+    <Compile Include="login\LoginViewController.designer.cs">
+      <DependentUpon>LoginViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login\RegisterViewController.cs" />
+    <Compile Include="login\RegisterViewController.designer.cs">
+      <DependentUpon>RegisterViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
