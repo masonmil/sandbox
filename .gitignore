@@ -22,6 +22,7 @@
 
 # Logs and databases #
 ######################
+*.mason
 *.log
 *.sql
 *.sqlite
