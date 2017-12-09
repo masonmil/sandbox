@@ -118,7 +118,6 @@
     <None Include="Entitlements.plist" />
     <None Include="Notes.txt" />
     <None Include="packages.config" />
-    <None Include="Notes.mason" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
