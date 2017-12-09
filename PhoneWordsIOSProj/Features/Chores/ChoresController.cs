@@ -3,7 +3,8 @@ using System;
 using UIKit;
 using System.Collections.Generic;
 using PhoneWordsIOSProj.model;
-
+using PhoneWordsIOSProj.Features.Chores;
+using PhoneWordsIOSProj.Services.Rest;
 
 namespace PhoneWordsIOSProj
 {
@@ -16,28 +17,25 @@ namespace PhoneWordsIOSProj
         {
             Chores = new List<Chore> {
                 new Chore {Id=0, Name="Groceries", Notes="Buy bread, cheese, apples", Done=false},
-                new Chore {Id=1, Name="Devices", Notes="Buy Nexus, Galaxy, Droid", Done=false},
-                new Chore {Id=2, Name="Devices2", Notes="Buy Nexus, Galaxy, Droid", Done=false},
-                new Chore {Id=3, Name="Devices3", Notes="Buy Nexus, Galaxy, Droid", Done=false},
-                new Chore {Id=4, Name="Devices4", Notes="Buy Nexus, Galaxy, Droid", Done=false},
-                new Chore {Id=5, Name="Devices5", Notes="Buy Nexus, Galaxy, Droid", Done=false},
-                new Chore {Id=6, Name="Devices6", Notes="Buy Nexus, Galaxy, Droid", Done=false},
-                new Chore {Id=7, Name="Devices7", Notes="Buy Nexus, Galaxy, Droid", Done=false},
-                new Chore {Id=8, Name="Devices8", Notes="Buy Nexus, Galaxy, Droid", Done=false},
-                new Chore {Id=9, Name="Devices9", Notes="Buy Nexus, Galaxy, Droid", Done=false},
-                new Chore {Id=10, Name="Devices10", Notes="Buy Nexus, Galaxy, Droid", Done=false},
-                new Chore {Id=11, Name="Devices11", Notes="Buy Nexus, Galaxy, Droid", Done=false},
-                new Chore {Id=12, Name="Devices12", Notes="Buy Nexus, Galaxy, Droid", Done=false},
-                new Chore {Id=13, Name="Devices13", Notes="Buy Nexus, Galaxy, Droid", Done=false},
+                new Chore {Id=1, Name="Devices", Notes="Buy Nexus, Galaxy, Droid", Done=false}
+
             };
 
 
 
         }
 
-        public override void ViewDidLoad()
+        public override async void ViewDidLoad()
         {
             AddButton.Clicked += (sender, e) => CreateTask();
+
+            var mgr = new TodoItemManager(new RestService());
+            var items = await mgr.GetTasksAsync();
+            foreach (var item in items)
+            {
+                Chores.Add(new Chore() { Id = Chores.Count, Name = item });
+            }
+            TableView.ReloadData();
         }
 
         public override void ViewWillAppear(bool animated)
